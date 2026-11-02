@@ -129,66 +129,222 @@
 
   <!-- 1. Full-Screen Hero Section with Background Slideshow -->
   <section class="hero-section" aria-label="Hero Introduction">
-    <!-- Slideshow container -->
+    <!-- Slideshow container (4 Slides including Stage Decor & Party Attractions) -->
     <div class="hero-slideshow" id="heroSlideshow">
       <div class="hero-slide is-active" style="background-image: url('images/hero1.jpg');"></div>
       <div class="hero-slide" style="background-image: url('images/hero2.jpg');"></div>
       <div class="hero-slide" style="background-image: url('images/hero3.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/stage-decoration.jpg');"></div>
     </div>
 
     <!-- Dark Maroon Overlay -->
     <div class="hero-overlay"></div>
 
-    <!-- Content -->
+    <!-- Slide Navigation Arrows -->
+    <button class="hero-arrow hero-arrow-prev" id="heroPrevBtn" aria-label="Previous Slide">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </button>
+    <button class="hero-arrow hero-arrow-next" id="heroNextBtn" aria-label="Next Slide">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+      </svg>
+    </button>
+
+    <!-- Multi-Slide Dynamic Content Container -->
     <div class="hero-content">
-      <div class="hero-badge-pill">
-        <span class="hero-pill-sparkle">✦</span>
-        <span>பாரம்பரிய மங்கள இசை • Authentic Cultural Percussion</span>
-      </div>
-      <h1 class="hero-title">
-        <span class="hero-title-lead">The Sacred Thunder of Rhythms</span>
-        <span class="hero-title-brand">AK CHENDAMELAM</span>
-      </h1>
-      <div class="ornament-divider">
-        <span class="ornament-diamond"></span>
-      </div>
-      <p class="hero-tagline">
-        Electrifying South Indian weddings, sacred temple thiruvizhas, and grand cultural gatherings with the authentic,
-        thunderous resonance of traditional Chendamelam and Ilaithalam.
-      </p>
-      <div class="hero-cta-group">
-        <a href="contact.html" class="btn btn-gold">
-          <span>Book Your Event • முன்பதிவு</span>
-        </a>
-        <a href="packages.html" class="btn btn-outline-gold">
-          <span>Explore Packages</span>
-        </a>
+      <!-- Slide Content 1: Main Chendamelam Brand -->
+      <div class="hero-slide-content is-active" data-slide-index="0">
+        <div class="hero-badge-pill">
+          <span class="hero-pill-sparkle">✦</span>
+          <span>பாரம்பரிய மங்கள இசை • Authentic Cultural Percussion</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-lead">The Sacred Thunder of Rhythms</span>
+          <span class="hero-title-brand">AK CHENDAMELAM</span>
+        </h1>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="hero-tagline">
+          Electrifying South Indian weddings, sacred temple thiruvizhas, and grand cultural gatherings with the authentic,
+          thunderous resonance of traditional Chendamelam and Ilaithalam.
+        </p>
+        <div class="hero-cta-group">
+          <a href="contact.html" class="btn btn-gold">
+            <span>Book Your Event • முன்பதிவு</span>
+          </a>
+          <a href="packages.html" class="btn btn-outline-gold">
+            <span>Explore Packages</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>350+ Grand Events</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>20+ Master Drummers</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Pan-South India Booking</span>
+          </div>
+        </div>
       </div>
 
-      <!-- In-Hero Luxury Trust Bar -->
-      <div class="hero-trust-bar">
-        <div class="hero-trust-item">
-          <span class="trust-icon">✦</span>
-          <span>350+ Grand Events</span>
+      <!-- Slide Content 2: Temple Thiruvizha & Divine Melam -->
+      <div class="hero-slide-content" data-slide-index="1">
+        <div class="hero-badge-pill">
+          <span class="hero-pill-sparkle">✦</span>
+          <span>திருவிழா &amp; கோவில் நிகழ்வுகள் • Temple Festivals &amp; Processions</span>
         </div>
-        <div class="hero-trust-divider"></div>
-        <div class="hero-trust-item">
-          <span class="trust-icon">✦</span>
-          <span>20+ Master Drummers</span>
+        <div class="hero-title">
+          <span class="hero-title-lead">Divine Festive Energy &amp; Tradition</span>
+          <span class="hero-title-brand">TEMPLE THIRUVIZHA MELAM</span>
         </div>
-        <div class="hero-trust-divider"></div>
-        <div class="hero-trust-item">
-          <span class="trust-icon">✦</span>
-          <span>Pan-South India Booking</span>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="hero-tagline">
+          Elevating temple kumbhabhishekams, ooravalams, and spiritual processions with ritual sanctity, synchronized beats, and heart-stirring devotional ecstasy.
+        </p>
+        <div class="hero-cta-group">
+          <a href="contact.html" class="btn btn-gold">
+            <span>Book Temple Event • முன்பதிவு</span>
+          </a>
+          <a href="gallery.html" class="btn btn-outline-gold">
+            <span>Watch Performances</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Authentic Kerala Style</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>High-Energy Decibels</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Spiritual Discipline</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Content 3: Wedding Reception Entries -->
+      <div class="hero-slide-content" data-slide-index="2">
+        <div class="hero-badge-pill">
+          <span class="hero-pill-sparkle">✦</span>
+          <span>திருமணம் &amp; வரவேற்பு • Royal Wedding Reception Melam</span>
+        </div>
+        <div class="hero-title">
+          <span class="hero-title-lead">Grand Entrances &amp; Auspicious Fanfare</span>
+          <span class="hero-title-brand">WEDDING CHENDAMELAM</span>
+        </div>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="hero-tagline">
+          Make bride &amp; groom arrivals, baraat processions, and VIP receptions truly unforgettable with traditional Kasavu attire and synchronized master percussion.
+        </p>
+        <div class="hero-cta-group">
+          <a href="contact.html" class="btn btn-gold">
+            <span>Book Wedding Melam</span>
+          </a>
+          <a href="packages.html" class="btn btn-outline-gold">
+            <span>View Packages</span>
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Traditional Uniforms</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>Custom Troupe Size</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="trust-icon">✦</span>
+            <span>100% Punctual Arrival</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Content 4: NEW SLIDE! Stage Decor, Popcorn, Cotton Candy, Mascot Costumes -->
+      <div class="hero-slide-content" data-slide-index="3">
+        <div class="hero-badge-pill">
+          <span class="hero-pill-sparkle">✦</span>
+          <span>கூடுதல் சிறப்பு சேவைகள் • Complete Event Entertainment</span>
+        </div>
+        <div class="hero-title">
+          <span class="hero-title-lead">We Also Specialize In Complete Celebrations</span>
+          <span class="hero-title-brand">STAGE DECOR &amp; PARTY ATTRACTIONS</span>
+        </div>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="hero-tagline">
+          Elevate weddings, birthdays &amp; celebrations with our complete turnkey event additions: <strong>Designer Stage Decorations</strong>, <strong>Live Hot Popcorn Stalls</strong>, <strong>Pastel Cotton Candy Carts</strong>, and <strong>Exciting Mascot Costumes</strong>!
+        </p>
+        <!-- Service Highlight Grid Pills -->
+        <div class="hero-services-mini-grid">
+          <div class="hero-service-pill">
+            <span class="pill-icon">🌸</span>
+            <div class="pill-text">
+              <strong>Stage Decoration</strong>
+              <small>Floral &amp; Royal Mandap</small>
+            </div>
+          </div>
+          <div class="hero-service-pill">
+            <span class="pill-icon">🍿</span>
+            <div class="pill-text">
+              <strong>Popcorn Stall</strong>
+              <small>Live Fresh &amp; Hot</small>
+            </div>
+          </div>
+          <div class="hero-service-pill">
+            <span class="pill-icon">🍭</span>
+            <div class="pill-text">
+              <strong>Cotton Candy</strong>
+              <small>Fluffy Carnival Candy</small>
+            </div>
+          </div>
+          <div class="hero-service-pill">
+            <span class="pill-icon">🎭</span>
+            <div class="pill-text">
+              <strong>Mascot Costumes</strong>
+              <small>Tom &amp; Jerry, Panda, Gorilla</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-cta-group" style="margin-top: 1.75rem;">
+          <a href="#event-attractions" class="btn btn-gold">
+            <span>View Photos &amp; Details</span>
+          </a>
+          <a href="https://wa.me/919884682102?text=Hi%2C%20I%20am%20interested%20in%20Stage%20Decoration%2C%20Popcorn%20Stall%2C%20Cotton%20Candy%20and%20Mascot%20Costumes." class="btn btn-whatsapp-pill" target="_blank" rel="noopener">
+            <span>Chat on WhatsApp Directly</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Manual / Auto Dots -->
+    <!-- Manual / Auto Dots (4 Slides) -->
     <div class="hero-indicators" aria-label="Slideshow Controls">
-      <button class="hero-dot is-active" aria-label="Slide 1"></button>
-      <button class="hero-dot" aria-label="Slide 2"></button>
-      <button class="hero-dot" aria-label="Slide 3"></button>
+      <button class="hero-dot is-active" aria-label="Slide 1 - Percussion"></button>
+      <button class="hero-dot" aria-label="Slide 2 - Temple Festivals"></button>
+      <button class="hero-dot" aria-label="Slide 3 - Wedding Entries"></button>
+      <button class="hero-dot" aria-label="Slide 4 - Stage Decor &amp; Party Stalls"></button>
     </div>
   </section>
 
@@ -537,6 +693,113 @@
             </a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3B. Event Party Attractions & Stage Decor Showcase -->
+  <section class="section section-cream" id="event-attractions" aria-label="Event Decor & Entertainment Attractions">
+    <div class="container">
+      <header class="section-header fade-up-element" style="text-align: center;">
+        <span class="tamil-tag">கூடுதல் சிறப்பு சேவைகள் • SPECIAL EVENT ATTRACTIONS</span>
+        <h2 class="section-title">We Also Provide Complete Event Attractions</h2>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="section-lead" style="max-width: 780px; margin: 0 auto;">
+          Make your celebration unforgettable! Along with our thunderous Chendamelam, we offer complete event services including <strong>Designer Stage Decorations</strong>, <strong>Live Hot Popcorn Stalls</strong>, <strong>Pastel Cotton Candy Carts</strong>, and <strong>Entertaining Mascot Costumes</strong>.
+        </p>
+      </header>
+
+      <div class="attractions-grid">
+        <!-- Card 1: Stage Decoration -->
+        <article class="attraction-card fade-up-element">
+          <div class="attraction-img-frame">
+            <img src="images/stage-decoration.jpg" alt="Wedding Stage Decoration with Floral Rings and Royal Sofa" loading="lazy">
+            <span class="attraction-tag">Stage &amp; Mandap</span>
+          </div>
+          <div class="attraction-body">
+            <h3 class="attraction-title">Designer Stage Decoration</h3>
+            <p class="attraction-desc">
+              Grand floral arches, royal couch arrangements, backdrop drapes, and warm ambient lighting tailored for weddings, receptions, and stage ceremonies.
+            </p>
+            <div class="attraction-footer">
+              <span class="attraction-badge">Custom Floral Themes</span>
+              <a href="https://wa.me/919884682102?text=Hi%2C%20I%20want%20to%20enquire%20about%20Stage%20Decoration%20services." class="attraction-enquire-link" target="_blank" rel="noopener">Enquire →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Live Popcorn Stall -->
+        <article class="attraction-card fade-up-element">
+          <div class="attraction-img-frame">
+            <img src="images/popcorn-stall.jpg" alt="Live Hot Popcorn Machine Stall for Events" loading="lazy">
+            <span class="attraction-tag">Live Stall</span>
+          </div>
+          <div class="attraction-body">
+            <h3 class="attraction-title">Live Fresh Popcorn Stall</h3>
+            <p class="attraction-desc">
+              Delight your guests and kids with fresh, buttery hot popcorn popped live on-site in a vintage-style cinema counter with dedicated attendants.
+            </p>
+            <div class="attraction-footer">
+              <span class="attraction-badge">Live On-Site Popping</span>
+              <a href="https://wa.me/919884682102?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20Popcorn%20Stall." class="attraction-enquire-link" target="_blank" rel="noopener">Enquire →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Cotton Candy Cart -->
+        <article class="attraction-card fade-up-element">
+          <div class="attraction-img-frame">
+            <img src="images/cotton-candy.jpg" alt="Pastel Cotton Candy Mobile Cart with Fairy Lights" loading="lazy">
+            <span class="attraction-tag">Carnival Treat</span>
+          </div>
+          <div class="attraction-body">
+            <h3 class="attraction-title">Sweet Cotton Candy Cart</h3>
+            <p class="attraction-desc">
+              Charming pastel candy wagon serving fluffy, cloud-like spun sugar cotton candy in vibrant pink, blue, and yellow flavors with glowing fairy lights.
+            </p>
+            <div class="attraction-footer">
+              <span class="attraction-badge">Fresh Spun Candy</span>
+              <a href="https://wa.me/919884682102?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20Cotton%20Candy%20Cart." class="attraction-enquire-link" target="_blank" rel="noopener">Enquire →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Mascot Costumes -->
+        <article class="attraction-card fade-up-element">
+          <div class="attraction-img-frame mascot-dual-frame">
+            <img src="images/mascot-costume-1.jpg" alt="Tom and Jerry Mascot Costumes" class="mascot-img-1" loading="lazy">
+            <img src="images/mascot-costume-2.jpg" alt="Panda and Gorilla Mascot Costumes" class="mascot-img-2" loading="lazy">
+            <span class="attraction-tag">Kids Favorite</span>
+          </div>
+          <div class="attraction-body">
+            <h3 class="attraction-title">Entertaining Mascot Costumes</h3>
+            <p class="attraction-desc">
+              Lively walk-around character mascots including <strong>Tom &amp; Jerry</strong>, friendly giant <strong>Panda</strong>, and <strong>King Kong Gorilla</strong> to entertain guests and create unforgettable photo moments.
+            </p>
+            <div class="attraction-footer">
+              <span class="attraction-badge">Tom &amp; Jerry • Panda • Gorilla</span>
+              <a href="https://wa.me/919884682102?text=Hi%2C%20I%20want%20to%20enquire%20about%20Mascot%20Costumes." class="attraction-enquire-link" target="_blank" rel="noopener">Enquire →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Combined Booking Banner -->
+      <div class="attractions-cta-banner fade-up-element">
+        <div class="attractions-cta-text">
+          <h3>Bundle With Chendamelam For Exclusive Package Savings!</h3>
+          <p>Book your percussion troupe along with Stage Decor, Popcorn &amp; Cotton Candy stalls, and Mascots for a complete one-stop celebration.</p>
+        </div>
+        <div class="attractions-cta-actions">
+          <a href="contact.html" class="btn btn-gold">
+            <span>Get Combined Quotation</span>
+          </a>
+          <a href="https://wa.me/919884682102?text=Hi%20Vallarasu%20Kumaran%2C%20I%20want%20a%20combo%20quote%20for%20Chendamelam%20%2B%20Stage%20Decor%20%2B%20Popcorn%20%2B%20Cotton%20Candy%20%2B%20Mascots." class="btn btn-whatsapp-pill" target="_blank" rel="noopener">
+            <span>WhatsApp Vallarasu Kumaran</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

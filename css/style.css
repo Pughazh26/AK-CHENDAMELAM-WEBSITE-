@@ -908,6 +908,313 @@ ul {
   border-radius: 6px;
 }
 
+/* Multi-Slide Hero Content Transitioning */
+.hero-slide-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-slide-content.is-active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Mini Services Grid (Slide 4) */
+.hero-services-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  max-width: 860px;
+  margin: 1.6rem auto 0 auto;
+}
+
+.hero-service-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(18, 5, 6, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 158, 50, 0.38);
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-service-pill:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 24px rgba(201, 158, 50, 0.28);
+}
+
+.hero-service-pill .pill-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.hero-service-pill .pill-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.hero-service-pill .pill-text strong {
+  font-size: 0.88rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.hero-service-pill .pill-text small {
+  font-size: 0.72rem;
+  color: var(--color-gold-light);
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .hero-services-mini-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  .hero-service-pill {
+    padding: 0.6rem 0.75rem;
+  }
+}
+
+/* Hero Slide Navigation Arrows */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(18, 5, 6, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 158, 50, 0.45);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.hero-arrow:hover {
+  background: var(--color-gold);
+  color: #120506;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 4px 20px rgba(201, 158, 50, 0.5);
+}
+
+.hero-arrow-prev {
+  left: 1.5rem;
+}
+
+.hero-arrow-next {
+  right: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .hero-arrow {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8B. Event Party Attractions & Stage Decor Showcase Section
+   -------------------------------------------------------------------------- */
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1100px) {
+  .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .attractions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.attraction-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(18, 5, 6, 0.08);
+  border: 1px solid rgba(201, 158, 50, 0.22);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(74, 14, 20, 0.16);
+  border-color: var(--color-gold);
+}
+
+.attraction-img-frame {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background-color: #120506;
+}
+
+.attraction-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.attraction-card:hover .attraction-img-frame img {
+  transform: scale(1.06);
+}
+
+.mascot-dual-frame {
+  display: flex;
+}
+
+.mascot-dual-frame img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attraction-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(18, 5, 6, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-gold);
+  border: 1px solid rgba(201, 158, 50, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  z-index: 2;
+}
+
+.attraction-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.attraction-title {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--color-maroon-deep);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.attraction-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.attraction-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.attraction-badge {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  background: rgba(201, 158, 50, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+.attraction-enquire-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-maroon-deep);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.attraction-enquire-link:hover {
+  color: var(--color-gold);
+  transform: translateX(3px);
+}
+
+/* Attractions CTA Banner */
+.attractions-cta-banner {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, #2b080d 0%, #150507 100%);
+  border: 1px solid rgba(201, 158, 50, 0.4);
+  border-radius: 20px;
+  padding: 2.2rem 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.attractions-cta-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.attractions-cta-text p {
+  color: rgba(250, 245, 235, 0.85);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.attractions-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .attractions-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.8rem 1.4rem;
+  }
+  .attractions-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .attractions-cta-actions .btn {
+    width: 100%;
+  }
+}
+
 /* --------------------------------------------------------------------------
    9. Page Banner (For Inner Pages: packages.html, gallery.html, contact.html)
    -------------------------------------------------------------------------- */

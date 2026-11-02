@@ -110,6 +110,46 @@
       type: "video",
       title: "Wedding Grand Entry Video",
       caption: "Energetic wedding entrance beats performed by AK Chendamelam artists."
+    },
+    {
+      id: 13,
+      src: "images/stage-decoration.jpg",
+      category: "decor",
+      type: "image",
+      title: "Designer Floral Stage Decoration",
+      caption: "Grand floral arches, royal couch setup, and elegant event lighting for wedding and reception."
+    },
+    {
+      id: 14,
+      src: "images/popcorn-stall.jpg",
+      category: "decor",
+      type: "image",
+      title: "Live Fresh Popcorn Machine Stall",
+      caption: "Hot, buttery fresh popcorn popped live on-site with vintage cinema stall presentation."
+    },
+    {
+      id: 15,
+      src: "images/cotton-candy.jpg",
+      category: "decor",
+      type: "image",
+      title: "Sweet Fluffy Cotton Candy Cart",
+      caption: "Pastel carnival wagon spinning fresh colorful cotton candy treats for wedding guests and kids."
+    },
+    {
+      id: 16,
+      src: "images/mascot-costume-1.jpg",
+      category: "decor",
+      type: "image",
+      title: "Tom & Jerry Mascot Characters",
+      caption: "Exciting walk-around cartoon mascot suits to entertain families, kids, and guests."
+    },
+    {
+      id: 17,
+      src: "images/mascot-costume-2.jpg",
+      category: "decor",
+      type: "image",
+      title: "Giant Panda & Gorilla Mascot Costumes",
+      caption: "Friendly giant Panda and Kong Gorilla mascots creating high-energy interactive fun."
     }
   ];
 
@@ -266,11 +306,14 @@
   }
 
   // --------------------------------------------------------------------------
-  // 6. Hero Slideshow with Crossfade & Slow Zoom (index.html)
+  // 6. Hero Slideshow with Crossfade & Content Sync (index.html)
   // --------------------------------------------------------------------------
   function initHeroSlideshow() {
     const slides = document.querySelectorAll('.hero-slide');
+    const contentSlides = document.querySelectorAll('.hero-slide-content');
     const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('heroPrevBtn');
+    const nextBtn = document.getElementById('heroNextBtn');
     if (slides.length === 0) return;
 
     let currentIndex = 0;
@@ -278,11 +321,13 @@
 
     function goToSlide(index) {
       slides[currentIndex].classList.remove('is-active');
+      if (contentSlides[currentIndex]) contentSlides[currentIndex].classList.remove('is-active');
       if (dots[currentIndex]) dots[currentIndex].classList.remove('is-active');
 
       currentIndex = (index + slides.length) % slides.length;
 
       slides[currentIndex].classList.add('is-active');
+      if (contentSlides[currentIndex]) contentSlides[currentIndex].classList.add('is-active');
       if (dots[currentIndex]) dots[currentIndex].classList.add('is-active');
     }
 
@@ -290,17 +335,40 @@
       goToSlide(currentIndex + 1);
     }
 
-    // Start auto slideshow every 5.5 seconds
-    slideInterval = setInterval(nextSlide, 5500);
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function resetTimer() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 6000);
+    }
+
+    // Start auto slideshow every 6 seconds
+    slideInterval = setInterval(nextSlide, 6000);
 
     // Indicator click handlers
     dots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
-        clearInterval(slideInterval);
         goToSlide(idx);
-        slideInterval = setInterval(nextSlide, 5500);
+        resetTimer();
       });
     });
+
+    // Arrow navigation
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetTimer();
+      });
+    }
   }
 
   // --------------------------------------------------------------------------
