@@ -26,6 +26,7 @@ const SITE_CONFIG = {
 
   // Business Info
   BUSINESS_NAME: "AK Chendamelam",
+  OWNER_NAME: "Vallarasu Kumaran",
   FOUNDED_YEAR: "2023"
 };
 
