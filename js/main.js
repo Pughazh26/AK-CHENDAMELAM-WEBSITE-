@@ -174,6 +174,62 @@
       type: "image",
       title: "Live DJ Music & Club Party Lighting",
       caption: "High-octane sound console and dynamic moving-head lights for wedding sangeet, reception, and youth parties."
+    },
+    {
+      id: 21,
+      src: "images/singari-melam.jpg",
+      category: "processions",
+      type: "image",
+      title: "Singari Melam Live Performance",
+      caption: "High-voltage energetic Kerala Singari Melam with synchronized dynamic steps, acrobatics, and rapid drumming."
+    },
+    {
+      id: 22,
+      src: "images/nadaswaram.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Traditional Nadaswaram & Thavil",
+      caption: "Auspicious classical Mangala Isai by master Nadaswaram and Thavil vidwans for wedding muhurthams and poojas."
+    },
+    {
+      id: 23,
+      src: "images/chariot.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Royal Wedding Chariot Entry",
+      caption: "Majestic flower-garlanded royal horse chariot (Ratham) with traditional silk canopy for grand groom and couple arrivals."
+    },
+    {
+      id: 24,
+      src: "images/doli-baza.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Royal Doli Baza (Bridal Palki)",
+      caption: "Opulent handcrafted royal doli (bridal palki) with fresh flower decor and traditional uniformed bearers."
+    },
+    {
+      id: 25,
+      src: "images/welcome-girls.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Traditional Welcome Girls (Aarthi)",
+      caption: "Graceful traditional welcome hospitality in authentic Kerala Kasavu sarees with brass lamps, rose water, and flower petals."
+    },
+    {
+      id: 26,
+      src: "images/welcome-dance.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Ceremonial Welcome Dance",
+      caption: "Mesmerizing Kerala classical and folk welcome dance performances receiving dignitaries and wedding couples."
+    },
+    {
+      id: 27,
+      src: "images/photography.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Wedding Photography & Film",
+      caption: "Professional high-definition candid photography, 4K cinematic reels, aerial drone shoots, and luxury wedding albums."
     }
   ];
 
@@ -708,7 +764,33 @@
   }
 
   // --------------------------------------------------------------------------
-  // 13. DOM Ready Initialization
+  // 13. Event Attractions Category Filter (index.html)
+  // --------------------------------------------------------------------------
+  function initAttractionsFilter() {
+    const filterBtns = document.querySelectorAll('.attractions-filter-btn');
+    const cards = document.querySelectorAll('.attractions-grid .attraction-card');
+    if (!filterBtns.length || !cards.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const filter = btn.getAttribute('data-attraction-filter');
+
+        cards.forEach(card => {
+          const cat = card.getAttribute('data-attraction-cat');
+          if (filter === 'all' || cat === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 14. DOM Ready Initialization
   // --------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
     applyConfigLinks();
@@ -719,6 +801,7 @@
     initScrollFadeUp();
     initFaqAccordion();
     initGalleryPage();
+    initAttractionsFilter();
     initContactForm();
     initImageFallbacks();
   });
