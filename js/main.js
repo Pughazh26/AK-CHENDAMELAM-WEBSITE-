@@ -150,6 +150,30 @@
       type: "image",
       title: "Giant Panda & Gorilla Mascot Costumes",
       caption: "Friendly giant Panda and Kong Gorilla mascots creating high-energy interactive fun."
+    },
+    {
+      id: 18,
+      src: "images/kathakali-theyyam.jpg",
+      category: "temple",
+      type: "image",
+      title: "Kerala Theyyam & Kathakali Traditional Art",
+      caption: "Majestic Kerala classical and spiritual art forms with authentic Vesham makeup, divine mudras, and royal attire."
+    },
+    {
+      id: 19,
+      src: "images/surprise-dance-entry.jpg",
+      category: "weddings",
+      type: "image",
+      title: "Grand Surprise Dance Wedding Entry",
+      caption: "Grand couple entrance with smoke cannons, cold pyros, synchronized dancers, and celebratory beats."
+    },
+    {
+      id: 20,
+      src: "images/dj-music.jpg",
+      category: "decor",
+      type: "image",
+      title: "Live DJ Music & Club Party Lighting",
+      caption: "High-octane sound console and dynamic moving-head lights for wedding sangeet, reception, and youth parties."
     }
   ];
 
