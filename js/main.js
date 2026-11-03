@@ -204,8 +204,8 @@
       src: "images/doli-baza.jpg",
       category: "weddings",
       type: "image",
-      title: "Royal Doli Baza (Bridal Palki)",
-      caption: "Opulent handcrafted royal doli (bridal palki) with fresh flower decor and traditional uniformed bearers."
+      title: "Royal Doli Baza (Bridal Pallakku)",
+      caption: "Opulent handcrafted royal doli (bridal pallakku) with fresh flower decor and traditional uniformed bearers."
     },
     {
       id: 25,
