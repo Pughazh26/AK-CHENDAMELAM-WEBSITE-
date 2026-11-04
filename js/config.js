@@ -21,7 +21,9 @@ const SITE_CONFIG = {
   PHONE_NUMBER: "+91 98846 82102",
   PHONE_TEL: "+919884682102",
   EMAIL_ADDRESS: "akchendamelam@gmail.com",
-  ADDRESS_LINE: "Madurai / Chennai, Tamil Nadu, India",
+  ADDRESS_LINE: "No. 4/15, Murugappa Naicker Street, Ganapathy Nagar, Alapakkam, Chennai - 600116",
+  MAPS_URL: "https://maps.google.com/?q=No+4/15,+Murugappa+Naicker+Street,+Ganapathy+Nagar,+Alapakkam,+Chennai+-+600116",
+  MAP_EMBED_URL: "https://maps.google.com/maps?q=No+4/15,+Murugappa+Naicker+Street,+Ganapathy+Nagar,+Alapakkam,+Chennai+-+600116&t=&z=15&ie=UTF8&iwloc=&output=embed",
   SERVICE_LOCATIONS: "Available across all districts of Tamil Nadu and South India",
 
   // Business Info

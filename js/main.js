@@ -310,7 +310,7 @@
     });
 
     document.querySelectorAll('[data-text="address-line"]').forEach(el => {
-      el.textContent = config.ADDRESS_LINE || "Madurai / Chennai, Tamil Nadu, India";
+      el.textContent = config.ADDRESS_LINE || "No. 4/15, Murugappa Naicker Street, Ganapathy Nagar, Alapakkam, Chennai - 600116";
     });
 
     document.querySelectorAll('[data-text="service-locations"]').forEach(el => {
