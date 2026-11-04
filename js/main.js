@@ -98,16 +98,16 @@
       src: "videos/performance.mp4",
       category: "videos",
       type: "video",
-      title: "Live Stage Performance 1",
-      caption: "Live high-voltage Chendamelam stage performance by AK Chendamelam percussion troupe."
+      title: "Temple Chendamelam (கோவில் திருவிழா)",
+      caption: "Sacred temple Chendamelam rhythm performance with traditional lamp ceremony."
     },
     {
       id: 12,
       src: "videos/performance-2.mp4",
       category: "videos",
       type: "video",
-      title: "Live Stage Performance 2",
-      caption: "Sacred temple Chendamelam rhythm performance with traditional lamp ceremony."
+      title: "Marriage Chendamelam (திருமண வரவேற்பு)",
+      caption: "High-energy wedding stage Chendamelam reception performance with grand celebration."
     },
     {
       id: 13,
