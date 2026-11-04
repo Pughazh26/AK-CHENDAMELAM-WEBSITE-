@@ -790,6 +790,32 @@
   }
 
   // --------------------------------------------------------------------------
+  // 13B. Live Performance Spotlight Video Player (index.html)
+  // --------------------------------------------------------------------------
+  function initLiveVideoPlayer() {
+    const video = document.getElementById('livePerformanceVideo');
+    const playBtn = document.getElementById('liveVideoPlayBtn');
+    if (!video || !playBtn) return;
+
+    playBtn.addEventListener('click', function () {
+      video.play();
+      playBtn.classList.add('is-hidden');
+    });
+
+    video.addEventListener('play', function () {
+      playBtn.classList.add('is-hidden');
+    });
+
+    video.addEventListener('pause', function () {
+      playBtn.classList.remove('is-hidden');
+    });
+
+    video.addEventListener('ended', function () {
+      playBtn.classList.remove('is-hidden');
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // 14. DOM Ready Initialization
   // --------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
@@ -802,6 +828,7 @@
     initFaqAccordion();
     initGalleryPage();
     initAttractionsFilter();
+    initLiveVideoPlayer();
     initContactForm();
     initImageFallbacks();
   });

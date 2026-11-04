@@ -175,6 +175,10 @@
           <a href="contact.html" class="btn btn-gold">
             <span>Book Your Event • முன்பதிவு</span>
           </a>
+          <a href="#live-performance" class="btn btn-outline-gold">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 0.35rem; vertical-align: middle;"><path d="M8 5v14l11-7z"/></svg>
+            <span>Watch Live Performance</span>
+          </a>
           <a href="packages.html" class="btn btn-outline-gold">
             <span>Explore Packages</span>
           </a>
@@ -217,8 +221,9 @@
           <a href="contact.html" class="btn btn-gold">
             <span>Book Temple Event • முன்பதிவு</span>
           </a>
-          <a href="gallery.html" class="btn btn-outline-gold">
-            <span>Watch Performances</span>
+          <a href="#live-performance" class="btn btn-outline-gold">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 0.35rem; vertical-align: middle;"><path d="M8 5v14l11-7z"/></svg>
+            <span>Watch Live Performance</span>
           </a>
         </div>
         <div class="hero-trust-bar">
@@ -479,6 +484,82 @@
             <span class="stat-ribbon-ta">கலைஞர்கள்</span>
             <span class="stat-ribbon-en">Troupe Artists</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2B. Live Performance Spotlight Section (Human-Crafted Real Video) -->
+  <section class="section section-dark live-video-section" id="live-performance" aria-label="Live Chendamelam Performance">
+    <div class="container">
+      <header class="section-header fade-up-element" style="text-align: center;">
+        <span class="tamil-tag">நேரலை மங்கள இசை • LIVE RECORDING</span>
+        <h2 class="section-title">Experience The Thunder Live</h2>
+        <div class="ornament-divider">
+          <span class="ornament-diamond"></span>
+        </div>
+        <p class="section-lead" style="max-width: 820px; margin: 0 auto;">
+          Feel the raw acoustic resonance, synchronized rhythm discipline, and high-energy festive spirit of <strong>AK Chendamelam</strong> recorded live on stage. Turn on your volume for full bass!
+        </p>
+      </header>
+
+      <div class="live-video-showcase-container fade-up-element">
+        <div class="live-video-player-wrapper">
+          <video 
+            id="livePerformanceVideo"
+            class="live-video-player"
+            src="videos/performance.mp4"
+            poster="images/singari-melam.jpg"
+            preload="metadata"
+            playsinline
+            controls
+          ></video>
+          <!-- Custom Play Button Overlay -->
+          <button class="video-custom-play-btn" id="liveVideoPlayBtn" aria-label="Play Performance Video">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span class="play-pulse-ring"></span>
+          </button>
+          <div class="video-live-badge">
+            <span class="live-dot"></span>
+            <span>LIVE STAGE PERFORMANCE</span>
+          </div>
+        </div>
+
+        <!-- Video Highlight Features Strip -->
+        <div class="live-video-features">
+          <div class="live-video-feature-box">
+            <span class="feature-icon">🥁</span>
+            <div>
+              <strong>Pure Acoustic Energy</strong>
+              <p>Authentic traditional Chenda, Ilathalam &amp; Kurumkuzhal synchrony.</p>
+            </div>
+          </div>
+          <div class="live-video-feature-box">
+            <span class="feature-icon">⚡</span>
+            <div>
+              <strong>High-Speed Kalam</strong>
+              <p>Rhythm acceleration that charges crowds with festive ecstasy.</p>
+            </div>
+          </div>
+          <div class="live-video-feature-box">
+            <span class="feature-icon">👑</span>
+            <div>
+              <strong>Ceremonial Kasavu Attire</strong>
+              <p>Disciplined, uniformed traditional Kerala presentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Video Action CTA -->
+        <div class="live-video-cta">
+          <a href="contact.html" class="btn btn-gold">
+            <span>Book This Troupe For Your Event • முன்பதிவு</span>
+          </a>
+          <a href="https://wa.me/919884682102?text=Hi%20Vallarasu%20Kumaran%2C%20I%20just%20watched%20your%20live%20performance%20video%20on%20the%20website%20and%20want%20to%20check%20availability." class="btn btn-whatsapp-pill" target="_blank" rel="noopener">
+            <span>Enquire on WhatsApp</span>
+          </a>
         </div>
       </div>
     </div>
