@@ -797,8 +797,29 @@
     const playBtn = document.getElementById('liveVideoPlayBtn');
     if (!video || !playBtn) return;
 
+    // Use video's own real footage frame as thumbnail
+    function setInitialVideoFrame() {
+      if (video.currentTime === 0) {
+        try {
+          video.currentTime = 0.1;
+        } catch (e) {}
+      }
+    }
+
+    if (video.readyState >= 1) {
+      setInitialVideoFrame();
+    } else {
+      video.addEventListener('loadedmetadata', setInitialVideoFrame, { once: true });
+    }
+
     playBtn.addEventListener('click', function () {
-      video.play();
+      if (video.currentTime <= 0.2) {
+        video.currentTime = 0;
+      }
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {});
+      }
       playBtn.classList.add('is-hidden');
     });
 
@@ -812,6 +833,9 @@
 
     video.addEventListener('ended', function () {
       playBtn.classList.remove('is-hidden');
+      try {
+        video.currentTime = 0.1;
+      } catch (e) {}
     });
   }
 
