@@ -2946,3 +2946,23 @@ ul {
   background: var(--color-gold);
   color: #1a0407;
 }
+
+@media (max-width: 640px) {
+  .video-custom-play-btn {
+    width: 62px;
+    height: 62px;
+  }
+  .video-custom-play-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+  .live-video-card-title {
+    font-size: 1.08rem;
+  }
+  .live-video-card-subtitle {
+    font-size: 0.82rem;
+  }
+  .footer-mini-map-box iframe {
+    height: 140px;
+  }
+}
