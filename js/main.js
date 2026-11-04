@@ -306,7 +306,7 @@
     });
 
     document.querySelectorAll('[data-text="email-address"]').forEach(el => {
-      el.textContent = config.EMAIL_ADDRESS || "akchendamelam@gmail.com";
+      el.textContent = config.EMAIL_ADDRESS || "vallarasukumaran10@gmail.com";
     });
 
     document.querySelectorAll('[data-text="address-line"]').forEach(el => {

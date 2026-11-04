@@ -20,7 +20,7 @@ const SITE_CONFIG = {
   // Direct Contact Information
   PHONE_NUMBER: "+91 98846 82102",
   PHONE_TEL: "+919884682102",
-  EMAIL_ADDRESS: "akchendamelam@gmail.com",
+  EMAIL_ADDRESS: "vallarasukumaran10@gmail.com",
   ADDRESS_LINE: "No. 4/15, Murugappa Naicker Street, Ganapathy Nagar, Alapakkam, Chennai - 600116",
   MAPS_URL: "https://maps.google.com/?q=No+4/15,+Murugappa+Naicker+Street,+Ganapathy+Nagar,+Alapakkam,+Chennai+-+600116",
   MAP_EMBED_URL: "https://maps.google.com/maps?q=No+4/15,+Murugappa+Naicker+Street,+Ganapathy+Nagar,+Alapakkam,+Chennai+-+600116&t=&z=15&ie=UTF8&iwloc=&output=embed",
