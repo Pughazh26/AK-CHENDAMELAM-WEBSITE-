@@ -95,21 +95,19 @@
     },
     {
       id: 11,
-      src: "videos/sample1.mp4",
-      poster: "videos/sample1_poster.jpg",
+      src: "videos/performance.mp4",
       category: "videos",
       type: "video",
-      title: "Live Temple Festival Video",
-      caption: "Watch live high-speed chendamelam rhythm acceleration during local temple festival."
+      title: "Live Stage Performance 1",
+      caption: "Live high-voltage Chendamelam stage performance by AK Chendamelam percussion troupe."
     },
     {
       id: 12,
-      src: "videos/sample2.mp4",
-      poster: "videos/sample2_poster.jpg",
+      src: "videos/performance-2.mp4",
       category: "videos",
       type: "video",
-      title: "Wedding Grand Entry Video",
-      caption: "Energetic wedding entrance beats performed by AK Chendamelam artists."
+      title: "Live Stage Performance 2",
+      caption: "Sacred temple Chendamelam rhythm performance with traditional lamp ceremony."
     },
     {
       id: 13,
@@ -793,50 +791,60 @@
   // 13B. Live Performance Spotlight Video Player (index.html)
   // --------------------------------------------------------------------------
   function initLiveVideoPlayer() {
-    const video = document.getElementById('livePerformanceVideo');
-    const playBtn = document.getElementById('liveVideoPlayBtn');
-    if (!video || !playBtn) return;
+    const setupVideo = (videoId, btnId, otherVideoId) => {
+      const video = document.getElementById(videoId);
+      const playBtn = document.getElementById(btnId);
+      if (!video) return;
 
-    // Use video's own real footage frame as thumbnail
-    function setInitialVideoFrame() {
-      if (video.currentTime === 0) {
-        try {
-          video.currentTime = 0.1;
-        } catch (e) {}
+      const setInitialFrame = () => {
+        if (video.currentTime === 0) {
+          try { video.currentTime = 0.1; } catch (e) {}
+        }
+      };
+
+      if (video.readyState >= 1) {
+        setInitialFrame();
+      } else {
+        video.addEventListener('loadedmetadata', setInitialFrame, { once: true });
       }
-    }
 
-    if (video.readyState >= 1) {
-      setInitialVideoFrame();
-    } else {
-      video.addEventListener('loadedmetadata', setInitialVideoFrame, { once: true });
-    }
+      if (playBtn) {
+        playBtn.addEventListener('click', function () {
+          // Pause other video if playing to avoid audio clash
+          const other = document.getElementById(otherVideoId);
+          if (other && !other.paused) {
+            other.pause();
+          }
 
-    playBtn.addEventListener('click', function () {
-      if (video.currentTime <= 0.2) {
-        video.currentTime = 0;
+          if (video.currentTime <= 0.2) {
+            video.currentTime = 0;
+          }
+          const p = video.play();
+          if (p !== undefined) p.catch(function () {});
+          playBtn.classList.add('is-hidden');
+        });
       }
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(function () {});
-      }
-      playBtn.classList.add('is-hidden');
-    });
 
-    video.addEventListener('play', function () {
-      playBtn.classList.add('is-hidden');
-    });
+      video.addEventListener('play', function () {
+        if (playBtn) playBtn.classList.add('is-hidden');
+        const other = document.getElementById(otherVideoId);
+        if (other && !other.paused) {
+          other.pause();
+        }
+      });
 
-    video.addEventListener('pause', function () {
-      playBtn.classList.remove('is-hidden');
-    });
+      video.addEventListener('pause', function () {
+        if (playBtn) playBtn.classList.remove('is-hidden');
+      });
 
-    video.addEventListener('ended', function () {
-      playBtn.classList.remove('is-hidden');
-      try {
-        video.currentTime = 0.1;
-      } catch (e) {}
-    });
+      video.addEventListener('ended', function () {
+        if (playBtn) playBtn.classList.remove('is-hidden');
+        try { video.currentTime = 0.1; } catch (e) {}
+      });
+    };
+
+    setupVideo('livePerformanceVideo1', 'liveVideoPlayBtn1', 'livePerformanceVideo2');
+    setupVideo('livePerformanceVideo2', 'liveVideoPlayBtn2', 'livePerformanceVideo1');
   }
 
   // --------------------------------------------------------------------------
