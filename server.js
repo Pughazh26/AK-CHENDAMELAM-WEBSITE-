@@ -96,15 +96,13 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`\n==================================================`);
-  console.log(` AK Chendamelam Website Live Local Server`);
-  console.log(` Running at: http://localhost:${PORT}`);
-  console.log(` Opening in your default browser...`);
-  console.log(`==================================================\n`);
+  console.log(`\nAK Chendamelam server running at http://localhost:${PORT}`);
 
-  exec(`start http://localhost:${PORT}`, (err) => {
-    if (err) {
-      console.log(`Note: Please open http://localhost:${PORT} in your browser manually.`);
-    }
-  });
+  if (!process.argv.includes('--no-open')) {
+    exec(`start http://localhost:${PORT}`, (err) => {
+      if (err) {
+        console.log(`Open http://localhost:${PORT} in your browser.`);
+      }
+    });
+  }
 });

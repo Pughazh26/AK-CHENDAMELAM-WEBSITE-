@@ -1,0 +1,11 @@
+{
+  "name": "ak-chendamelam-website",
+  "version": "1.0.0",
+  "description": "Official website for AK Chendamelam & Event Management (@ak_kalasamithi)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Vallarasu Kumaran",
+  "private": true
+}
